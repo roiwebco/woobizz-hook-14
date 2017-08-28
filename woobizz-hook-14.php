@@ -28,16 +28,17 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 }
 //Add Hook 14
 function woobizzhook14_change_woocommerce_preloader(){
+	$url = site_url();
 	echo"
 	<style> 
 	.blockUI.blockOverlay:before{
 		content: '';
-		background: url('http://localhost/woobizz/wp-admin/images/spinner-2x.gif') center center;
+		background: url(".$url."/wp-admin/images/spinner-2x.gif) center center;
 		background-size: cover;
 	}
 	a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.loading:after {
 		content: '';
-		background: url(http://localhost/woobizz/wp-admin/images/spinner-2x.gif) center center;
+		background: url(".$url."/wp-admin/images/spinner-2x.gif) center center;
 		background-size: cover;
 	}
 	</style>
